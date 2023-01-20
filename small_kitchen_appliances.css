@@ -1,0 +1,87 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;900&family=Rubik:wght@300&display=swap');
+*{
+    /* font-family: 'Poppins', sans-serif; */
+    margin: 0px;
+    padding: 0px;
+}
+#mid_section h1{
+    font-size: 2.9em;
+    color: #1a4e8a;
+    padding: 10px 0px;
+    font-family: Poppins;
+    font-weight: 600;
+    font-size: 45px;
+    letter-spacing: normal;
+    
+}
+#mid_section{
+    display: flex;
+    flex-direction: column;
+
+    margin: auto;
+    width: 88%;
+}
+#mid_section>div:nth-child(1),#mid_section>div:nth-child(2),#mid_section>div:nth-child(5),
+#mid_section>div:nth-child(7){
+    display: flex;
+    justify-content: center;
+}
+#mid_section>div:nth-child(1) span{
+    color: #dcdcdc;
+}
+#mid_section>div:nth-child(1) h4{
+    color: #1377c9;
+}
+#mid_section>div:nth-child(2), #mid_section>div:nth-child(7){
+    font-family: Poppins;
+    padding: 10px 0px;
+  
+}
+#mid_section>div:nth-child(3){
+    display: flex;
+    justify-content: center;
+    font-family: Poppins;
+    color: #1a4e8a;
+}
+#mid_section>div:nth-child(4){
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    grid-gap: 20px;
+}
+#mid_section>div:nth-child(4):hover{
+    cursor: pointer;
+}
+#mid_section>div:nth-child(4) img{
+    width: 100%;
+}
+#mid_section>div:nth-child(4) p,#mid_section>div:nth-child(6) p{
+    padding-left: 20px;
+    letter-spacing: .7px;
+    font-family: poppins;
+    font: 20px;
+    font-weight: bold;
+}
+#mid_section>div:nth-child(6){
+    display: flex;
+}
+#mid_section>div:nth-child(6) img{
+    width: 93%;
+}
+#mid_section>div:nth-child(7){
+    margin: 8px 0px;
+}
+#mid_section>div:nth-child(8){
+    display: flex;
+}
+#mid_section>div:nth-child(8) img{
+    width: 100%;
+}
+#mid_section>div:nth-child(9){
+    display: flex;
+    justify-content: center;
+}
+/* single grey div */
+body>div:nth-child(3){
+   background-color: #f7f7f8;
+}
+/* single grey div */
