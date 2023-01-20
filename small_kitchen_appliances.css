@@ -85,3 +85,34 @@ body>div:nth-child(3){
    background-color: #f7f7f8;
 }
 /* single grey div */
+#container{
+    display: flex;
+    border: 2px solid red;
+    width: 86%;
+    margin:auto;
+}
+#functionalities{
+    display: flex;
+    flex-direction: column;
+    width: 26%;
+    border: 2px solid green;
+}
+
+#functionalities>div>div:nth-child(3),#functionalities>div>div:nth-child(4){
+    display: flex;
+}
+#functionalities>div>div:nth-child(5){
+    border: 1px solid grey;
+    display: flex;
+    justify-content:space-around;
+}
+#functionalities>div>div:nth-child(5)>input{
+    width: 90%;
+    border: none;
+    height : 20px;
+}
+
+#functionalities>div>div:nth-child(5) svg{
+    width: 10%;
+    border: 2px solid red;
+}
