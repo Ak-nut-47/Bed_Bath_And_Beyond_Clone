@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;900&family=Rubik:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Play:wght@400;700&family=Poppins:wght@200;300;400;500;900&family=Rubik:wght@300&display=swap');
 *{
     /* font-family: 'Poppins', sans-serif; */
     margin: 0px;
@@ -83,63 +83,184 @@
 /* single grey div */
 body>div:nth-child(3){
    background-color: #f7f7f8;
+   padding-top: 25px;
 }
 /* single grey div */
 #container{
     display: flex;
-    border: 2px solid red;
     width: 86%;
     margin:auto;
 }
 #functionalities{
     display: flex;
     flex-direction: column;
-    width: 26%;
-    border: 2px solid green;
+    width: 24%;
+   
+    padding: 10px 20px;
 }
-
+.functionalities_subchild_2{
+    margin-top: 7px;
+}
 #functionalities>div>div:nth-child(3),#functionalities>div>div:nth-child(4){
     display: flex;
+    
 }
+.functionalities_subchild_3{
+   
+    margin-top: 35px;
+    margin-bottom: 5px;
+}
+.functionalities_subchild_3 span{
+    color: #1a80d3;
+}
+.functionalities_subchild_3 a{
+    color: rgb(139, 138, 138);
+    font-size: 14px;
+}
+.functionalities_subchild_3+div a{
+    color: rgb(139, 138, 138);
+    font-size: 14px;
+}
+.checkbox{
+    width: 22px;
+    height: 22px;
+    margin-right: 7px;
+}
+
 #div_svg{
-    border: 1px solid grey;
+    border: 2px solid #d6d6d6;
     display: flex;
     justify-content:space-around;
+    margin-top: 30px;
+    width: 80%;
+    margin-bottom: 15px;
 }
 #functionalities>div>div:nth-child(5)>input{
     width: 100%;
     border: none;
     height : 20px;
-    padding: 15px 0px;;
+    padding: 10px 8px;
+    
+}
+#functionalities>div>div:nth-child(5)>input:focus{
+    outline: none;
+}
+.functionality_divs{
+    width: 80%;
+    border-bottom: 2px solid #d6d6d6;
+}
+.functionality_divs:hover{
+    cursor: pointer;
+}
+#functionalities>div>div:nth-child(5) svg{
+    width: 8%;
+    padding-right: 10px;
+    background-color: white;
 }
 
-#functionalities>div>div:nth-child(5) svg{
-    width: 10%;
-    border: 2px solid red;
+
+#product_type{
+    border-top: 2px solid #d6d6d6;
 }
+.functionality_headings{
+    font-family: Poppins;
+    font-size: 16px;
+    font-weight: 400;
+    color: #262525;
+    padding: 15px 0px;
+}
+
+.functionality_headings+div{
+    display: flex;
+    align-items: center;
+    color: #b6b6b6;
+}
+  #brand_type_sub , #price_sub,#product_type_sub{
+    display: none;
+}
+#product_type_sub>div,#price_sub>div, #brand_type_sub>div{
+    margin-bottom: 8px;
+}
+
+
+
 #functionalities>div:nth-child(2),#functionalities>div:nth-child(4),
 #functionalities>div:nth-child(6),#functionalities>div:nth-child(7),
 #functionalities>div:nth-child(9),#functionalities>div:nth-child(10),
 #functionalities>div:nth-child(11),#functionalities>div:nth-child(12){
-    border: 1px solid grey;
     display: flex;
     justify-content: space-between;
 }
 #functionalities>div:nth-child(2) + div div{
-    background-color: red;
+    /* background-color: red; */
     display: flex;
 }
-#brand_type + div{
-    background-color: green;
-    display: flex;
+#brand_type_sub{
+    /* background-color: green; */
+    display: none;
     flex-direction: column;
 }
 #brand_type + div>div{
     display: flex;
 }
 #price+div>div{
-    background-color: blue;
+    /* background-color: blue; */
     display: flex;
+}
+.checkbox{
+   
+}
+
+/* -**********_________________******************************* */
+/* CARDS */
+/* -**********_________________******************************* */
+
+#cards{
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 20px;
+}
+.card{
+    display: flex;
+    flex-direction: column;
+    padding: 17px;
+    background-color: white;
+    border-radius: 15px;
+    box-shadow: rgba(186, 184, 184, 0.35) 0px 5px 15px;
+}
+.card>div div{
+margin-bottom: 8px;
+}
+.card h3{
+    font-family: 'Play', sans-serif;
+    font-size: 15px;
+    color: #898b8c;
+}
+.card-price {
+    color: red;
+    font-family: 'Play', sans-serif;
+    font-weight: 600;
+    font-size: larger;
+}
+.early-price{
+    text-decoration: line-through;
+}
+.btn{
+    width: 100%;
+    background-color:white;
+    padding: 14px 24px;
+    border: 2px solid #1377c9;
+    border-radius: 5px;
+}
+.btn:hover{
+    cursor: pointer;
+    background-color: #0e558f;
+    color:white;
+    border-radius: 5px;
+}
+.card img{
+    width:100%;
 }
 
 
