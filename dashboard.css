@@ -34,40 +34,32 @@
 .side-section li:hover{
     background-color: #264669;
 }
-
-
 .content-section{
-    margin-left: 330px;
-    margin-top: 50px;
-    width: 75%;
-}
-.top{
+    margin-left: 320px;
+    margin-top: 220px;
     display: flex;
-    justify-content: space-between;
+    width: 90%;
     background-color: #f9fafb;
 }
-.rendering-div table{
-    width: 100%;
+.content-section>div{
+    width: 25%;
+    height: 200px;
+    text-align: center;
+    margin: auto;
+    justify-content: space-evenly;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
 }
-.top h3{
-    margin-left: 30px;
+.content-section>div>h2,
+.content-section>div>p{
+   margin-top: 25px;
 }
-.add-delete{
-    margin-right: 30px;
+
+#products-display{
+    background-color: #f2eae4;
 }
-.add-delete button{
-    padding: 5px;
-    padding-left: 30px;
-    padding-right: 30px;
-    background-color: #1a4e8a;
-    color: white;
-    border: none;
-    border-radius: 5px;
+#orders-display{
+    background-color: #e3e9f2;
 }
-.add-delete button:hover{
-    background-color: #264669;
-}
-.rendering-div{
-    margin-top: 50px;
-    background-color: #f9fafb;
+#customers-display{
+    background-color: #eae0f0;
 }
