@@ -1,0 +1,1 @@
+GET https://63c6d291dcdc478e15ca4df5.mockapi.io/appliances
