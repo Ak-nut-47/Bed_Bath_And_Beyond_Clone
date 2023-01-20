@@ -101,18 +101,45 @@ body>div:nth-child(3){
 #functionalities>div>div:nth-child(3),#functionalities>div>div:nth-child(4){
     display: flex;
 }
-#functionalities>div>div:nth-child(5){
+#div_svg{
     border: 1px solid grey;
     display: flex;
     justify-content:space-around;
 }
 #functionalities>div>div:nth-child(5)>input{
-    width: 90%;
+    width: 100%;
     border: none;
     height : 20px;
+    padding: 15px 0px;;
 }
 
 #functionalities>div>div:nth-child(5) svg{
     width: 10%;
     border: 2px solid red;
 }
+#functionalities>div:nth-child(2),#functionalities>div:nth-child(4),
+#functionalities>div:nth-child(6),#functionalities>div:nth-child(7),
+#functionalities>div:nth-child(9),#functionalities>div:nth-child(10),
+#functionalities>div:nth-child(11),#functionalities>div:nth-child(12){
+    border: 1px solid grey;
+    display: flex;
+    justify-content: space-between;
+}
+#functionalities>div:nth-child(2) + div div{
+    background-color: red;
+    display: flex;
+}
+#brand_type + div{
+    background-color: green;
+    display: flex;
+    flex-direction: column;
+}
+#brand_type + div>div{
+    display: flex;
+}
+#price+div>div{
+    background-color: blue;
+    display: flex;
+}
+
+
