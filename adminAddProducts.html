@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Better Living Home | Admin Add Products</title>
+</head>
+<link rel="stylesheet" href="./adminAddProducts.css">
+<body>
+    <div class="main">
+        <div class="side-section">
+            <p>Better Living Home</p>
+            <p>Admin Panel</p>
+            <ul>
+               <li id="dashboard-page">Dashboard</li>
+               <li id="products-page">Products</li>
+               <li id="orders-page">Orders</li>
+               <li id="customers-page">Customers</li>
+            </ul>
+        </div>
+        <div class="main-content-section">
+            <div class="content-section">
+                <h3>Add New Products</h3>
+                <div>
+                    <form>
+                      <input type="text" placeholder="Enter Title" id="title">
+                      <input type="text" placeholder="Enter description about product" id="description">
+                      <select id="category">
+                         <option value="">Select Category</option>
+                         <option value="Juicer">Juicer</option>
+                         <option value="Mixer">Mixer</option>
+                         <option value="Blender">Blender</option>
+                         <option value="Coffee-maker">Coffee Maker</option>
+                         <option value="Toaster">Toaster</option>
+                         <option value="Air-fryer">Air Fryer</option>
+                      </select>
+                      <input type="number" placeholder="Enter Price" id="price">
+                      <input type="text" placeholder="Enter Image URL" id="image">
+                      <input type="submit" value="Add Product" id="add">
+                    </form>
+                </div>
+            </div>
+            <div>
+                <h3>Delete a Product</h3>
+                <form>
+                    <input type="number" placeholder="Enter ID" id="delete-id">
+                    <input type="submit" value="Delete Product" id="delete-btn">
+                </form>
+            </div>
+        </div>
+        
+   </div>
+</body>
+<script src="./adminAddProducts.js"></script>
+</html>
