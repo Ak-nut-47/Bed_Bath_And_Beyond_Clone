@@ -5,7 +5,26 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>HOME PAGE</title>
+
+    <!-- dropDown navbar part -->
+    <link rel="stylesheet" href="./navbar.css" />
+    <link
+      rel="icon"
+      href="./images/0_overstock.com_logo-thumb.jpg"
+      sizes="16x16"
+      type="image/png"
+    />
+
+    <!-- dropDown navbar ends here -->
     <link rel="stylesheet" href="./style/home.css" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Dosis&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- style for Footer starts from here -->
+
+    <!-- style for Footer ends from here -->
   </head>
   <body>
     <nav id="navbar-one">
@@ -29,7 +48,8 @@
     </nav>
     <!--end of navbar-one -->
 
-    <nav id="navbar-two">
+    <div id="navbar"></div>
+    <!-- <nav id="navbar-two">
       <div id="better-living">
         <div>
           <h5>Better Living</h5>
@@ -58,10 +78,10 @@
             alt=""
         /></a>
       </div>
-    </nav>
+    </nav> -->
     <!--end of navbar-two -->
 
-    <nav id="navbar-three">
+    <!-- <nav id="navbar-three">
       <ul>
         <li>
           <a href="#"> Bedding </a>
@@ -161,7 +181,7 @@
           </ul>
         </li>
       </ul>
-    </nav>
+    </nav> -->
 
     <!-- red banner section is here -->
     <div class="red_banner_section">
@@ -574,6 +594,87 @@
         </div>
       </div>
     </div>
+
+    <h1 id="h1">just for you</h1>
+    <div class="slideshow_2_body">
+      <div id="images_body_2"></div>
+      <span id="prev_2" class="arrow_2 prev_2">&#10094;</span>
+      <span id="next_2" class="arrow_2 next_2">&#10095;</span>
+    </div>
+
+    <div class="paragraph_section_parent">
+      <div>
+        <p>
+          True to its name, Bed Bath & Beyond® is committed to being the
+          destination for home goods, offering a wide array of top-quality items
+          in bedding, bath, home décor, furniture, beauty & fitness, luggage,
+          and more. Whether your aesthetic is traditional, modern, rustic,
+          farmhouse, or transitional, you'll find an impressive assortment of
+          household items to suit your décor style.
+        </p>
+      </div>
+      <div>
+        <p>
+          In addition to the well-known brands, our competitive lineup of owned
+          brands can help you create the ambiance for your every need. For
+          instance, luxuriate in a serene oasis with Everhome™, sleep happy and
+          stay cozy with Wamsutta®, or attain organized bliss Squared Away™.
+          Simply Essential™ has all the essentials for the everyday task at hand
+          and H for Happy™ has everything you need for every season. When family
+          and friends spend time together, OurTable™ ensures you what you need
+          to cook a delicious meal to share together.
+        </p>
+      </div>
+      <div>
+        <p>
+          Bed Bath & Beyond serves as a one-stop shop to create a custom
+          <a href="#">wedding registry</a>
+          with convenience and ease. With a huge selection of must-have
+          household items like bedding, cookware, electronics, and more from top
+          brands, Bed Bath & Beyond is here to make registering for your wedding
+          the least of your worries by guiding you through the process step by
+          step. For instance, features like interactive registry checklists,
+          helpful online tools, and unique perks make creating a wedding
+          registry super simple. Plus, with
+          <a href="#">registry favorites</a> and household essentials across all
+          categories, look to Bed Bath & Beyond as the top destination for
+          shopping.
+        </p>
+      </div>
+      <div>
+        <p>
+          Shopping is easy in-store with Bed Bath & Beyond's coast-to-coast
+          presence and our user-friendly website. You can order online and use
+          our curbside or <a href="#">Store Pickup</a> option or our
+          <a href="#">Same Day Delivery</a>. And if you want additional perks
+          and benefits, our Welcome Rewards+™ program is just for you!
+        </p>
+      </div>
+    </div>
   </body>
+
   <script src="./script/home.js"></script>
+  <script type="module">
+    import navbar from "./navbar.js";
+
+    let navbar_div = document.getElementById("navbar");
+    navbar_div.innerHTML = navbar();
+
+    let sectionDiv = document.querySelector(".section-div ");
+    sectionDiv.addEventListener("click", function () {
+      let dropDownContainer = document.querySelector(".dropdown-content-part");
+      dropDownContainer.style.display = "flex";
+    });
+
+    let body = document.querySelector("body");
+    body.addEventListener("click", () => {
+      let dropDownContainer = document.querySelector(".dropdown-content-part");
+      dropDownContainer.style.display = "none";
+    });
+
+    let navbarID = document.getElementById("navbar");
+    navbarID.addEventListener("click", (event) => {
+      event.stopPropagation();
+    });
+  </script>
 </html>
