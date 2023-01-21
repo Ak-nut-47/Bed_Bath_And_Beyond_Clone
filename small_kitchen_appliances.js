@@ -46,11 +46,15 @@ price_type.addEventListener("click", () => {
     }
     
 })
+// working with Cards
 
+let productsArr = [];
+let arr = JSON.parse(localStorage.getItem("small_kitchen_appliances")) || [];
 fetch("https://63c6d291dcdc478e15ca4df5.mockapi.io/appliances")
     .then(response => response.json())
     .then(data => {
-        console.log(data)
+        productsArr = data;
+        console.log(productsArr)
         displayAsCards(data);
     });
 
@@ -89,7 +93,23 @@ function displayAsCards(data) {
         `;
         container.appendChild(card);
     })
+    buttonClickEvent();
 }
+
+function buttonClickEvent() { 
+    let btn = document.querySelectorAll(".btn");
+btn.forEach((item) => {
+   
+    item.addEventListener("click", () => {
+        console.log("working")
+        let id = item.getAttribute("data-id");
+        arr.push(productsArr[id]);
+        localStorage.setItem("small_kitchen_appliances", JSON.stringify(arr));
+        JSON.stringify(localStorage.getItem("small_kitchen_appliances"));
+    })
+})
+}
+
 
 
     
