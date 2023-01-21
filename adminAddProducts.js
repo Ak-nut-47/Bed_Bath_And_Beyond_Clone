@@ -7,7 +7,11 @@ let addProduct = document.getElementById("adding-product");
 let delProduct = document.getElementById("deleting-product");
 let add = document.getElementById("add");
 let del = document.getElementById("delete-btn");
+let home = document.getElementById("home");
 
+home.addEventListener("click",() => {
+    window.location = "";
+})
 dashboard.addEventListener("click",() => {
     window.location = "./dashboard.html";
 })
@@ -41,7 +45,7 @@ add.addEventListener("click",(e) => {
         },
         body : JSON.stringify(addData)
     });
-
+    alert("Product Added Successfully !!");
 });
 
 del.addEventListener("click",(e) => {
@@ -52,4 +56,5 @@ del.addEventListener("click",(e) => {
     fetch(`${url}/${productId}`,{
         method : "DELETE"
     })
+    alert("Product Deleted Successfully !!");
 });

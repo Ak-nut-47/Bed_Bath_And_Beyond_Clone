@@ -63,3 +63,8 @@
 #customers-display{
     background-color: #eae0f0;
 }
+
+#prodStatus{
+    font-size: 22px;
+    color: blue;
+}
