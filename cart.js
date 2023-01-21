@@ -1,5 +1,5 @@
 
-let cartproducts = JSON.parse(localStorage.getItem("cart"));
+let cartproducts = JSON.parse(localStorage.getItem("small_kitchen_appliances"));
 let emp = document.getElementById("empty");
 let dis = document.getElementById("card");
 let con = document.getElementById("con");

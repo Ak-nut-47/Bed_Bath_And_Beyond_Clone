@@ -1,7 +1,9 @@
-
+body{
+  background-color: #dcdcde;
+}
 #empty{
     width: 80%;
-    height: 300px;
+    height: 200px;
     /* border: 1px solid black; */
     margin: auto;
 }
@@ -80,6 +82,7 @@
 background-color:#f7f7f7; 
 width: 100%;
 height: 1200px;
+margin-top: 20px;
    } 
    #first{
 
@@ -135,4 +138,59 @@ color: black;
   }
   #shop:hover{
     text-decoration: underline;
+  }
+  p{
+    text-align: center;
+  }
+  #last_min{
+    width: 90%;
+    height: auto;
+    /* border: 1px solid red; */
+    margin: auto;
+   border-radius: 10px;
+    background-color: white;
+    display: grid;
+    grid-template-columns: repeat(6,1fr);
+    gap: 20px;
+    padding: 20px;
+  }
+  .carditem{
+    /* border: 1px solid black; */
+    border-radius: 10px;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+
+  }
+  .carditem>img{
+    width: 100%;
+    height: 200px;
+    margin-top: 10px;
+  }
+  #rate{
+    width: 100%;
+    height: 50px;
+  }
+  .carditem>button{
+    display: block;
+    margin: auto;
+    width: 90%;
+    border: 3px solid #dcdcde;
+    background-color: white;
+    color:#07425b;
+    margin-bottom: 10px;
+    font-size: medium;
+    font-weight: bold;
+
+  }
+  .carditem>button:hover{
+    cursor: pointer;
+    background-color: #07425b;
+    color: white;
+  }
+  .carditem>h3{
+    text-align: center;
+  }
+  .carditem>p:hover{
+    text-decoration: underline;
+   cursor: pointer;
+    color: #176383;
   }
