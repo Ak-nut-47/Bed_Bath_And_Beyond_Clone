@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="appleid-signin-client-id" content="[CLIENT_ID]">
+        <meta name="appleid-signin-scope" content="[SCOPES]">
+        <meta name="appleid-signin-redirect-uri" content="[REDIRECT_URI]">
+        <meta name="appleid-signin-state" content="[STATE]">
+    <title></title>
+    <style>
+        #container{
+            width:90%;
+            height:800px;
+            background-color: #f7f7f7; 
+            margin: auto;
+        }
+      img{
+        width:100%; 
+        height: 200px;
+        margin: auto;
+      } 
+      .signin-button {
+            width: 90%;
+            max-width: 100%;
+        }
+     #fimg{
+        width:50%;
+        margin: auto; 
+        height: 750px;
+        margin-top: 30px; 
+      background-color: white;
+     } 
+     #nav{
+        width: 100%;
+        height: 60px;
+        background-color:#154c79; 
+        color: white; 
+        
+     }  
+     .inputField {
+  position: relative; 
+  width: 100%;
+}
+
+.inputField input {
+  padding: 8px 20px;
+  padding-top: 18px;
+  border: 1.8px solid rgba(107, 107, 107, 0.4);
+  border-radius: 3px;
+  width: 90%;
+  color: black;
+}
+
+.inputField input:focus {
+  border: 1.8px solid #6b6b6b;
+  outline: none;
+}
+
+.inputField span {
+  pointer-events: none;
+  opacity: 0.5;
+  position: absolute;
+  padding-left: 20px;
+  left: 0;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
+  cursor: text;
+}
+
+.inputField input:focus+span,
+.inputField input:not(:placeholder-shown)+span {
+  top: 7px;
+  -webkit-transform: scale(0.7) translateY(-10%) translateX(-8.5px);
+  transform: scale(0.7) translateY(-10%) translateX(-8.5px);
+}
+
+.inputField input,
+.inputField span {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
+  -webkit-transition-timing-function: cubic-bezier(0.25, 0.1, 0.25, 1);
+  transition-timing-function: cubic-bezier(0.25, 0.1, 0.25, 1);
+}
+     a{
+        text-align: center; 
+        margin: auto;
+        margin-left: 10px;;
+        color: white; 
+        text-decoration: none;
+        font-size: large; 
+        padding:auto;
+     }
+     #navt{
+        padding:30px 30px 30px 30px;
+     } 
+     #sub{
+        background-color: #1377c9; 
+        border: #1377c9; 
+        width: 92%; 
+        height: 50px; 
+        color: white; 
+        border-radius: 5px;
+     } 
+     .line{
+        content: " ";
+    height: 2px;
+    background-color: #d8d8d8;
+    width: 46%;
+    margin: 12px 0;
+     } 
+     #hoz {
+   width: 92%; 
+   text-align: center; 
+   border-bottom: 2px solid gray; 
+   line-height: 0.1em;
+   margin: 10px 0 20px; 
+} 
+#logo{
+  width:10%;
+  height: 45px;
+}
+h2 span { 
+    background:#fff; 
+    padding:0 10px; 
+} 
+
+    </style>
+</head>
+<body > 
+    <div id="nav"><div id="navt"><a href="index.html">< Back</a></div></div>
+    <div id="container">
+
+  <div id="fimg"><img src="https://b3h2.scene7.com/is/image/BedBathandBeyond/WR_deskstop_22_07_2022?$content$&wid=1280"/>
+
+   <div style="padding-left: 30px;"> <h2 style="color: #1a4e8a;"> create Account</h2><br>
+   <form id="submit">
+    <div class="inputField">
+        <input type="email" placeholder=" " id="email"  required/>
+        <span>* Email</span>
+      </div> <br>  
+      <div class="inputField">
+        <input type="text" placeholder=" " id="fname" required/>
+        <span>* First Name</span>
+      </div>   <br>
+      <div class="inputField">
+        <input type="text" placeholder=" " id="lname" required/>
+        <span>* Last Name</span>
+      </div> <br> 
+      <div class="inputField">
+        <input type="tel" placeholder=" " id="mob" required/>
+        <span>* Phone Number for Store Lookup</span>
+      </div>  <br>  
+      <div class="inputField">
+       <input type="date" id="birthday" name="birthday" required>
+       <span>* birthday</span>
+        </div>
+      <p>Let us know your birthday so we can send a reward to celebrate your day! </p> <br>    
+      <div class="inputField">
+        <input type="password" placeholder=" " id="pass" required/>
+        <span>* Password</span>
+      </div> <br>      
+      <div class="inputField">                                                                                                                   
+      <input type="submit" id="sub"value="Create an Account"/>
+      </div><br><br> 
+       </form>
+  <input type="checkbox" checked>
+  <label>Yes, add me to the Bed Bath & Beyond email list.</label> <br>
+  <input type="checkbox" checked>
+   <label>Yes, add me to the buybuyBABY email list.</label><br> 
+   <input type="checkbox" checked>
+   <label>Yes, add me to the Harmon email list.</label><br> 
+   <input type="checkbox" checked>
+   <label>Keep me signed in</label><br> 
+   <input type="checkbox" checked>
+    <label> if using a public device</label><br>
+  <h2 id="hoz"></h2><br>
+  <p>By continuing you agree to enroll in and to the<span><u>Terms</u></span>of our Welcome Rewards Program. For information on our privacy practices, please visit our <u>Privacy Policy</u>California residents: view our Notice of Financial Incentive </p>
+  <p style="text-align: center;">© 2022 Bed Bath & Beyond Inc. and its subsidiaries.</p>
+</div>
+</div> 
+
+    </div>
+    <script> 
+      
+      var submit = document.getElementById("sub"); 
+      var form = document.getElementById("submit");
+      
+      
+      form.addEventListener("submit",(e)=>{   
+        e.preventDefault() 
+        var e = JSON.parse(localStorage.getItem("email"))||[]
+        var arr= JSON.parse(localStorage.getItem("user"))||[]  
+        var email =document.getElementById("email").value;
+      var fname = document.getElementById("fname").value; 
+      var lname = document.getElementById("lname").value;
+      var mobile = document.getElementById("mob").value; 
+      var dob = document.getElementById("birthday").value;
+      var pass = document.getElementById("pass").value; 
+       var e = JSON.parse(localStorage.getItem("email"))||[]  
+       if(mobile.length>10 || mobile.length<10){
+        alert("mobile no should be of 10 Digits")
+       } 
+       else{
+        let obj = {
+          email:email, 
+          fname:fname,
+          lname:lname,
+          mobile:mobile,
+          dob:dob,
+          pass:pass,
+        }  
+          arr.push(obj) 
+        console.log(arr)  
+        localStorage.setItem("user",JSON.stringify(arr))
+          
+        window.location.href="./signin1.html"
+        }
+        
+
+      }) 
+      
+      </script>
+</body> 
+
+</html>
