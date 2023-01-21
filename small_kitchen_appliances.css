@@ -126,6 +126,9 @@ body>div:nth-child(3){
     height: 22px;
     margin-right: 7px;
 }
+.checkbox:hover{
+    cursor: pointer;
+}
 
 #div_svg{
     border: 2px solid #d6d6d6;
@@ -260,7 +263,15 @@ margin-bottom: 8px;
     border-radius: 5px;
 }
 .card img{
-    width:100%;
+    width:90%;
+}
+#min{
+    width: 80%;
+    padding-left: 10px;
+}
+#max{
+    width: 80%;
+    padding-left: 10px;
 }
 
 
