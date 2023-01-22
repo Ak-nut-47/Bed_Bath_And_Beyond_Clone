@@ -19,7 +19,7 @@ customers.addEventListener("click",() => {
 })
 
 window.addEventListener("load",() => {
-    let orderData = JSON.parse(localStorage.getItem(""));
+    let orderData = JSON.parse(localStorage.getItem("OrderInfo"));
 
     if(orderData == undefined){
        orderData = [];
@@ -37,16 +37,16 @@ function renderCustomers(orderData){
        let row = document.createElement("tr");
 
        let order = document.createElement("td");
-       order.innerText = element.orderNo;
+       order.innerText = element.Order_number;
 
        let payMode = document.createElement("td");
-       payMode.innerText = element.pmode;
+       payMode.innerText = element.Payment_mode;
 
        let payStatus = document.createElement("td");
-       payStatus.innerText = element.pstatus;
+       payStatus.innerText = element.Payment_status;
 
        let amount = document.createElement("td");
-       amount.innerText = element.bamount;
+       amount.innerText = element.Amount;
 
        row.append(order,payMode,payStatus,amount);
 
