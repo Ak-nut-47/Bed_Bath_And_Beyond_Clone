@@ -1,0 +1,50 @@
+/* #footer {
+  text-align: center;
+  background-color: #f7f7f7;
+  width: 100%;
+  height: 1200px;
+}
+#first {
+  width: 100%;
+  height: auto;
+  display: flex;
+  margin: auto;
+  gap: auto;
+  text-align: center;
+  padding: auto;
+}
+#one {
+  width: 25%;
+  height: auto;
+  margin-left: 50px;
+  text-align: left;
+}
+.grids {
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  display: grid;
+}
+a {
+  color: black;
+}
+#sub {
+  border-radius: 5px;
+  border: 2px solid grey;
+  width: 100%;
+  height: 40px;
+}
+button {
+  background-color: blue;
+  width: 100%;
+  height: 50px;
+  color: white;
+  border-radius: 5px;
+  border: 1px solid white;
+}
+img {
+  width: 50%;
+  height: 50px;
+}
+
+a {
+  text-decoration: none;
+} */
