@@ -258,19 +258,19 @@ prevArrow.addEventListener("click", () => {
   nextArrow.style.cursor = "pointer";
 });
 
-let c = 1;
-setInterval(() => {
-  c++;
-  if (c == 4) {
-    c = 1;
-    appendSliderImages(data1);
-  }
-  if (c == 2) {
-    appendSliderImages(data2);
-  } else if (c == 3) {
-    appendSliderImages(data3);
-  }
-}, 3000);
+// let c = 1;
+// setInterval(() => {
+//   c++;
+//   if (c == 4) {
+//     c = 1;
+//     appendSliderImages(data1);
+//   }
+//   if (c == 2) {
+//     appendSliderImages(data2);
+//   } else if (c == 3) {
+//     appendSliderImages(data3);
+//   }
+// }, 3000);
 
 //SECOND SLIDESHOW PART IS HERE
 let secondImageContainer = document.getElementById("images_body_2");
