@@ -109,8 +109,8 @@ let totalPrice = paymentproducts.reduce((acc,item)=>{
     
    
 },0)
- totalcost.innerText = "$"+ totalPrice;
- totalCartPrice.innerText = "$"+parseFloat(totalPrice+1.86).toFixed(2);
+totalcost.innerText = "$"+ parseFloat(totalPrice).toFixed(2);
+totalCartPrice.innerText = "$"+parseFloat(totalPrice+1.86).toFixed(2);
 
 //  console.log(typeof(totalPrice));
 
