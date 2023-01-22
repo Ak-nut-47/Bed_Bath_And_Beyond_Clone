@@ -14,7 +14,8 @@
             width:90%;
             height:1000px;
             background-color: #f7f7f7; 
-            margin: auto;
+            margin: auto; 
+            
         }
       img{
         width:100%; 
@@ -144,8 +145,9 @@ h2 span {
         let obj ={
           email
         }   
-        let count=0 
-        let name
+        let count=0  
+        let temp=0
+        let name=""
         arr.forEach(element => {
           if(element.email == email && element.pass == pass){
             count++; 
@@ -155,14 +157,18 @@ h2 span {
            count=0;
           }
         }); 
-        console.log(count)
-         if(count>0){
-            alert("welcome",name) 
-            window.location.href="index.html"
+        console.log(count) 
+        if(email.includes("admin") && count>0){
+            alert("Welcome Admin "+name) 
+            window.location.href="./dashboard.html"
+        }
+        else if(count>0){
+            alert("Welcome "+name) 
+            window.location.href="./index.html"
          }
          else{ 
             alert("user not found")
-            window.location.href="signup.html"
+            window.location.href="./signup.html"
          }
       })
     </script>

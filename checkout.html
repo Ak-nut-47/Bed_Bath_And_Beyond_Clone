@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Better Living Home</title>
+    <link rel="stylesheet" href="./checkout.css">
+    
+</head>
+<body>
+    <nav>
+        <div style="height: 100%;">
+           <p id="back" style="margin-top: 30px; margin-left: 50px; font-size: large;">Back to Cart</p>
+        </div>
+         <div id="better-living">
+            <div>
+              <h5>Better Living</h5>
+              <h3>HOME</h3>
+            </div>
+          </div>
+    </nav>
+    <div id="image">
+    <img src="./checkout_images/checkout.png" alt="">
+    </div>
+    
+    <div id="con" class="con">
+        <div style=" width: 60%;">
+        <div  id="gift">
+            <h3 style="margin-bottom: 15px;">Gift Options</h3>
+            <div style="display: flex;">
+            <div>
+                <input style="width: 25px; height: 25px;" type="checkbox"><span>
+                    <img width="35px" src="./checkout_images/gift.png" alt="">
+            </div>
+            
+                <span style="margin-top: 8px;">Order includes gift(s). The packing slip included with your order will not display prices.</span>
+            </div>
+            
+          </div>
+    <div id="fill_address">
+        <h3>Delivery address</h3>
+        <div >
+            <p style="margin-top: 70px;">+</p>
+            <p>Add New Address</p>
+        </div> 
+    </div>
+    <div id="ad">
+        <h3>Delivery address</h3>
+    <form id="address">
+        <h2>Enter Your Address!</h2>
+        <input placeholder="Pin code" type="number" id="Pin" required><br>
+        <input placeholder="Flat/House No." type="text" id="house" required><br>
+        <input placeholder="Address" type="text" id="add" required><br>
+        <input placeholder="Landmark/Area" type="text" id="landmark" required><br>
+        <input placeholder="City/State" type="text"  id="City" required><br>
+        <h3>Delivery Contact</h3>
+        <input placeholder="Name" type="text"  id="name" required><br>
+        <input placeholder="Mobile Number" type="number"  id="mob" required><br>
+        <input id="sub" style="background-color: #008ecc; font-family: 'Times New Roman', Times, serif; color: white; border: 0px;" type="submit" value="Save Address">
+    </form>
+
+    <div id="adddis">
+        <h3 id="disname"></h3>
+        <p id="addres"></p>
+        <p id="housno"></p>
+        <p id="city"></p>
+        <p id="pincode"></p>
+        <p id="landmark"></p>
+        <p id="Mobile"></p>
+        <button>Default Address!</button>
+    </div>
+    
+</div>
+</div>
+<div class="total">
+    <div style="border-bottom:2px solid black; padding: 10px; "><h1>Order Summary</h1></div> 
+    <div style="border-bottom:2px solid #a8a8a9 ; padding: 10px;"><h2>No of Products:- <span id="count">0</span></h2></div> 
+    <div style="padding: 10px;"> 
+        <p style="color: black;margin-top: 5px;">Order Subtotal:-<span  style="margin-left:70px" id="cost"></span></p>
+        <p style="color: black;margin-top: 5px;">Shipping Details:-<span style="margin-left:70px"> Free</span></p>
+        <p style="color: black;margin-top: 5px; ">Estimated Tax:-<span  style="margin-left:80px">$1.86</span></p>
+        <p style="color: black;margin-top: 5px; padding-bottom: 10px;">Total:-<span id="total" style="margin-left:80px"></span></p>
+        
+    </div> 
+     <h2 style="padding-left: 10px;">welcome rewards</h2>
+     <p style="color: black; padding-left: 10px;">You’re earning points on this purchase!</p>
+     <p style="color: black; padding-left: 10px;">Get $5 in rewards when you reach 5,000 points.</p>
+     <button id="checkout">Proceed to Savings & Payments</button>
+
+</div>
+</div>
+    
+    <script src="./checkout.js"></script>
+</body>
+</html>

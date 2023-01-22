@@ -16,18 +16,26 @@
         <a id="shop" href="index.html">Continue Shopping</a>
     </div>
     <div id="con" class="con">
-        <h1>Your Cart(<span id="count">0</span>)</h1>
+        
     <div id="card" class="card">
+        <h1>Your Cart(<span id="count">0</span>)</h1>
         <!-- Append cart items -->
     </div>
   
     <div class="total">
-        <h1>Description</h1>
-        <h2>Total Produts:- <span id="count"></span></h2>
-        <h2>Total Price:-<span id="cost"></span></h2>
-
-        <button id="order">Place Order</button>
-
+        <div style="border-bottom:2px solid black; padding: 10px; "><h1>Order Summary</h1></div> 
+        <div style="padding: 10px;"> 
+            <p style="color: black;margin-top: 5px;">Order Subtotal:-<span  style="margin-left:70px" id="cost"></span></p>
+            <p style="color: black;margin-top: 5px;">Shipping Details:-<span style="margin-left:70px"> Free</span></p>
+            <p style="color: black;margin-top: 5px; ">Estimated Tax:-<span  style="margin-left:80px">$1.86</span></p>
+            <p style="color: black;margin-top: 5px; padding-bottom: 10px;">Total:-<span id="total" style="margin-left:80px"></span></p>
+            
+        </div> 
+         <h2 style="padding-left: 10px;">welcome rewards</h2>
+         <p style="color: black; padding-left: 10px;">You’re earning points on this purchase!</p>
+         <p style="color: black; padding-left: 10px;">Get $5 in rewards when you reach 5,000 points.</p>
+         <button id="go_to_checkout">Checkout</button>
+    
     </div>
 </div>
 <div>

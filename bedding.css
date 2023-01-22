@@ -94,6 +94,7 @@ nav{
 #slider>div:nth-child(2){
     display: flex;
     overflow-y: hidden;
+    overflow-x:hidden;
 }
 
 #slider>div:nth-child(1),#slider>div:nth-child(3){
@@ -170,4 +171,15 @@ nav{
 #kitchen_appliances>img{
     border-radius: 50%;
     width: 70%;
+}
+#right_slider,#left_slider{
+    color: #1377c9;
+}
+#right_slider:hover,#left_slider:hover{
+    background-color:#1377c9;
+    color: white;
+}
+
+#slider>div>div{
+    border-bottom: 2px solid #1377c9 ;
 }
