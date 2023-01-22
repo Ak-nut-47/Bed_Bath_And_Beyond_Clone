@@ -14,7 +14,8 @@
             width:90%;
             height:1000px;
             background-color: #f7f7f7; 
-            margin: auto;
+            margin: auto; 
+            
         }
       img{
         width:100%; 
@@ -159,11 +160,11 @@ h2 span {
         console.log(count) 
         if(email.includes("admin") && count>0){
             alert("Welcome Admin") 
-            window.location.href="admin.html"
+            window.location.href="./dashboard.html"
         }
         else if(count>0){
             alert("welcome",name) 
-            window.location.href="index.html"
+            window.location.href="./index.html"
          }
          else{ 
             alert("user not found")
