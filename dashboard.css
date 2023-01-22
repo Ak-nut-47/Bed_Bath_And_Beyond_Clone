@@ -64,7 +64,10 @@
     background-color: #eae0f0;
 }
 
-#prodStatus{
+#prodStatus,#orderStatus,#userStatus{
     font-size: 22px;
-    color: blue;
+    color: #1a4e8a;
 }
+#home:hover{
+    cursor: pointer;
+ }

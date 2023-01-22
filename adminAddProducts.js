@@ -10,7 +10,7 @@ let del = document.getElementById("delete-btn");
 let home = document.getElementById("home");
 
 home.addEventListener("click",() => {
-    window.location = "";
+    window.location = "./index.html";
 })
 dashboard.addEventListener("click",() => {
     window.location = "./dashboard.html";
@@ -38,14 +38,18 @@ add.addEventListener("click",(e) => {
        inStock : true
     };
 
-    fetch(url,{
-        method : "POST",
-        headers : {
-            "content-type" : "application/json"
-        },
-        body : JSON.stringify(addData)
-    });
-    alert("Product Added Successfully !!");
+    let num = formValidation(addData);
+
+    if(num == 5){
+        fetch(url,{
+            method : "POST",
+            headers : {
+                "content-type" : "application/json"
+            },
+            body : JSON.stringify(addData)
+        });
+        alert("Product Added Successfully !!");
+    }
 });
 
 del.addEventListener("click",(e) => {
@@ -53,8 +57,75 @@ del.addEventListener("click",(e) => {
 
     let productId = delProduct.deleteId.value;
 
-    fetch(`${url}/${productId}`,{
-        method : "DELETE"
-    })
-    alert("Product Deleted Successfully !!");
+    let x = deleteFormValidation();
+
+    if(x == 1){
+        
+        // fetch(`${url}/${productId}`)
+        // .then((res) => {
+        //     return res.json();
+        // })
+        // .then((data) => {
+        //         arr.push(data);
+        // })
+            fetch(`${url}/${productId}`,{
+                method : "DELETE"
+            })
+            alert("Product Deleted Successfully !!");
+        }
+
 });
+
+function formValidation(data) {
+     let check = 0;
+
+     if(data.title == ""){
+        alert("Please Enter Title");
+     }
+     else{
+        check++;
+     }
+
+     if(data.description == ""){
+        alert("Please Enter Description about Product");
+     }
+     else{
+        check++;
+     }
+
+     if(data.category == ""){
+        alert("Please Select a Category");
+     }
+     else{
+        check++;
+     }
+
+     if(data.price == ""){
+        alert("Please Enter a Price");
+     }
+     else{
+        check++;
+     }
+
+     if(data.image == ""){
+        alert("Please Enter a Valid URL for Image");
+     }
+     else{
+        check++;
+     }
+
+     return check;
+}
+
+function deleteFormValidation(data){
+    let check = 0;
+
+    if(delProduct.deleteId.value == ""){
+        alert("Please Enter a ID");
+    }
+    else{
+        check++;
+    }
+
+    return check;
+}
