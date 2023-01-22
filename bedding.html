@@ -12,6 +12,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="navbar.css">
     <style> 
    
         #footer{
@@ -76,10 +77,89 @@
         font-size: 16px;
         font-family: 'Times New Roman', Times, serif;
       }
+      #container{
+        margin-top: 160px;
+      }
+      h1{
+        font-size: 50px;
+      }
+      body{
+        margin:auto;
+        padding: auto;
+      }
+      /* nav top *//* nav top *//* nav top *//* nav top *//* nav top */
+      #navbar-one {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  display: block;
+  transition: top 0.3s;
+  z-index: 1;
+  display: flex;
+  /* border: 2px solid red; */
+  height: 40px;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #3510bd;
+  color: white;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+#navbar-one-first-div {
+  padding-left: 20px;
+}
+#navbar-one-first-div p {
+  font-family: fantasy;
+}
+#navbar-one-second-div {
+  /* border: 2px solid blue; */
+  width: 50%;
+  align-items: center;
+  padding-right: 20px;
+}
+.navbar-one-second-div-div {
+  /* border: 2px solid rgb(255, 0, 76); */
+  float: right;
+  width: 45%;
+  align-items: center;
+  letter-spacing: 7;
+  font-size: 12px;
+}
+.navbar-one-second-div-div img {
+  height: 20px;
+  float: left;
+  margin-right: 8px;
+}
+
+#mid_section>div{
+    margin-bottom: 20px;
+}
+#mid_section>div:nth-child(1){
+    margin-bottom: 0px;
+}
      </style>
 </head>
 <body>
-    <nav></nav>
+    <nav id="navbar-one">
+        <div id="navbar-one-first-div"><p>Better Living Home</p></div>
+        <div id="navbar-one-second-div">
+          <div class="navbar-one-second-div-div">
+            <img
+              src="https://img.icons8.com/ios/2x/bag-diagonal-view.png"
+              alt=""
+            />
+            <p><b>Same day delivery</b>|order by 2 pm</p>
+          </div>
+          <div class="navbar-one-second-div-div">
+            <img
+              src="https://img.icons8.com/ios-filled/2x/bag-diagonal-view.png"
+              alt=""
+            />
+            <p><b>Store Pickup</b>|Find a Store</p>
+          </div>
+        </div>
+      </nav>
+    <div id="navbar"></div>
     <div id="container">
         <div>
             <h1>bedding</h1>
@@ -98,9 +178,9 @@
         </div>
         <div id="slider">
             <div>
-                <button><strong>&#60;</strong></button>
+                <button id="left_slider" style="cursor: pointer;"><strong >&#60;</strong></button>
             </div>
-            <div>
+            <div id="scrollll" >
                 <div>
                     <img src="./bedding_images/1.webp" alt="Bedding Image">
                     <h3>bedding</h3>
@@ -153,7 +233,7 @@
                 </div>
             </div>
             <div>
-                <button><strong>&#62;</strong></button>
+                <button id="right_slider" style="cursor: pointer;"><strong>&#62;</strong></button>
             </div>
         </div>
         <div>
@@ -365,3 +445,26 @@
 </body>
 </html>
 <script src="./bedding.js"></script>
+<script type="module">
+    import navbar from "./navbar.js";
+
+    let navbar_div = document.getElementById("navbar");
+    navbar_div.innerHTML = navbar();
+
+    let sectionDiv = document.querySelector(".section-div ");
+    sectionDiv.addEventListener("click", function () {
+      let dropDownContainer = document.querySelector(".dropdown-content-part");
+      dropDownContainer.style.display = "flex";
+    });
+
+    let body = document.querySelector("body");
+    body.addEventListener("click", () => {
+      let dropDownContainer = document.querySelector(".dropdown-content-part");
+      dropDownContainer.style.display = "none";
+    });
+
+    let navbarID = document.getElementById("navbar");
+    navbarID.addEventListener("click", (event) => {
+      event.stopPropagation();
+    });
+  </script>
