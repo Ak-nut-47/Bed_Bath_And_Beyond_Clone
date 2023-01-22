@@ -1,5 +1,5 @@
-let navbar = () =>{
-    return`
+let navbar = () => {
+  return `
     <div class="header">
     <div>
       <div type="button"
@@ -9,7 +9,7 @@ let navbar = () =>{
       </div>
       
       <div class="overstocklogo" onclick="window.location.href='index.html'">
-        <img class="overstockIndex" src="https://i.postimg.cc/0yCKC2SV/svgexport-1.png" alt="" />
+        <img class="overstockIndex" src="./logoImage/logo1.jpg" alt="logo" />
       </div>
       <div class="class-input">
         <div>
@@ -60,19 +60,20 @@ let navbar = () =>{
     </div>
     <div class="section-div">
     <div onclick="window.location.href='furniture.html'"
-    >Furniture</div>
-      <div>Rugs</div>
-      <div>Decor</div>
-      <div>Bed & Bath</div>
-      <div>Home Improvement</div>
+    >Bedding</div>
+      <div>Bath</div>
       <div>Kitchen</div>
-      <div>Outdoor</div>
-      <div>Jewelry</div>
-      <div>Lighting</div>
+      <div>Dining</div>
+      <div>Storage & Cleaning</div>
+      <div>Home Decors</div>
+      <div>Curtains & window</div>
+      <div>Furniture</div>
+      <div>Health & Beauty</div>
       <div>Kids & Baby</div>
-      <div>More</div>
+      
       <div>Holiday & Gifts</div>
       <div>Sales & Deals</div>
+      <div>More</div>
     </div>
     <div class="dropdown-content-main dropdown-content-part">
       <div>
@@ -165,7 +166,8 @@ let navbar = () =>{
 
       
     </div>
-  </div>`
+  </div>`;
+};
+export default navbar;
 
-}
-export default navbar; 
+// https://i.postimg.cc/0yCKC2SV/svgexport-1.png
