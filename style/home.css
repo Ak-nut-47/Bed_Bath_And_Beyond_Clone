@@ -202,12 +202,10 @@ p {
   color: black;
   position: absolute;
   top: 45%;
-  border-radius: ;
-  padding: 9px 18px;
   background: linear-gradient(to left bottom, #a9a59b, #ffffff);
   border: 0.5px solid teal;
   padding: 10px 20px;
-  border-radius: 50%;
+  /* border-radius: 50%; */
   user-select: none;
 }
 
@@ -229,7 +227,6 @@ p {
   position: relative;
   justify-content: space-around;
   top: 175px;
-  /* height: 350px; */
   border: 2px solid black;
 }
 #images_body {
@@ -241,7 +238,6 @@ p {
 }
 #images_body > div {
   width: 20%;
-  /* border: 2px solid red; */
   display: flex;
   flex-direction: column;
   padding: 10px;
@@ -289,7 +285,6 @@ p {
 }
 
 /* first_image_big_banner */
-
 .first_image_big_banner {
   margin-bottom: 25px;
 }
@@ -325,7 +320,6 @@ p {
 
 /* winnter_saving_spotlight section */
 .winnter_saving_spotlight {
-  /* border: 2px solid red; */
   width: 90%;
   margin: auto;
   position: relative;
@@ -337,7 +331,6 @@ p {
   color: rgb(17, 17, 66);
   font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
   margin-bottom: 48px;
-  /* margin-top: 20px; */
 }
 .winnter_saving_spotlight_three_imgages {
   display: flex;
@@ -392,7 +385,6 @@ p {
 }
 
 /* SECOND RED BIG BANNER */
-
 .second_big_red_banner {
   width: 90%;
   margin: auto;
@@ -405,7 +397,6 @@ p {
 }
 .make_it_healthy_and_save_parent {
   width: 90%;
-  /* border: 2px solid red; */
   position: relative;
   top: 240px;
   margin: auto;
@@ -501,7 +492,6 @@ p {
 }
 
 .welcome_to_shopping_parent {
-  /* border: 2px dotted black; */
   width: 90%;
   margin: auto;
   position: relative;
@@ -598,7 +588,6 @@ p {
   padding: 10px 20px;
   background-color: rgb(255, 255, 255);
   border: 0.5px solid teal;
-  border-radius: 50%;
 }
 .arrow_2:hover {
   background-color: rgb(179, 170, 153);
