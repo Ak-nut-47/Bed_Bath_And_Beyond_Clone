@@ -104,6 +104,8 @@
     background-color: #1a4e8a;
     color: white;
 }
-
+#home:hover{
+   cursor: pointer;
+}
 
 
