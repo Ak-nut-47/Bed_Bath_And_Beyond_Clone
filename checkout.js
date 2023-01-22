@@ -49,3 +49,28 @@ let nBtn = document.getElementById("checkout");
 nBtn.addEventListener("click",()=>{
    window.location.href="payment.html"
 })
+
+let cartproducts = JSON.parse(localStorage.getItem("small_kitchen_appliances"));
+let totalpro = document.getElementById("count");
+let totalcost = document.getElementById("cost");
+// let checkoutBtn = document.getElementById("go_to_checkout");
+let totalCartPrice = document.getElementById("total");
+
+totalpro.innerText=cartproducts.length;
+
+let totalPrice = cartproducts.reduce((acc,item)=>{
+   acc = acc + item.price;
+   return acc;
+
+
+
+},0)
+totalcost.innerText = "$"+ totalPrice;
+totalCartPrice.innerText = "$"+parseFloat(totalPrice+1.86).toFixed(2);
+
+
+
+let backToCartBtn = document.getElementById("back");
+backToCartBtn.addEventListener("click",()=>{
+   window.location.href="cart.html";
+})
