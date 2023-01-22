@@ -147,7 +147,7 @@ h2 span {
         }   
         let count=0  
         let temp=0
-        let name
+        let name=""
         arr.forEach(element => {
           if(element.email == email && element.pass == pass){
             count++; 
@@ -159,16 +159,16 @@ h2 span {
         }); 
         console.log(count) 
         if(email.includes("admin") && count>0){
-            alert("Welcome Admin") 
+            alert("Welcome Admin "+name) 
             window.location.href="./dashboard.html"
         }
         else if(count>0){
-            alert("welcome",name) 
+            alert("Welcome "+name) 
             window.location.href="./index.html"
          }
          else{ 
             alert("user not found")
-            window.location.href="signup.html"
+            window.location.href="./signup.html"
          }
       })
     </script>

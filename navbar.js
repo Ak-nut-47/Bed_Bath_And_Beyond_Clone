@@ -20,20 +20,20 @@ let navbar = () => {
       </div>
       </div>
       <div id="account1" class="class-account class-account-common">
-        <div onclick="window.location.href='signup.html'">
+        <div onclick="window.location.href='SignIn.html'">
           <img src="https://i.postimg.cc/RCb3PDNz/User.png" alt="" />
         </div>
-        <div onclick="window.location.href='signup.html'" >Account</div>
+        <div onclick="window.location.href='SignIn.html'" >Account</div>
         <div class="chevronup">
           <img src="https://i.postimg.cc/DZHpvK2K/Chevron-Up.png" alt="" />
         </div>
         <div class="account-dropdown-content">
-          <div>My Account</div>
+          <div onclick="window.location.href='SignIn.html'">My Account</div>
           <div>My Orders</div>
           <div>My Reviews</div>
           <div>Gift Cards</div>
           <div>Help</div>
-          <div>Sign Out</div>
+          <div onclick="window.location.href='index.html'">Sign Out</div>
         </div>
       </div>
       <div onclick="window.location.href='list.html'" class="class-account class-account-common">
