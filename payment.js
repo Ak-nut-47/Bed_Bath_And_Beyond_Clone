@@ -18,7 +18,7 @@ let totalPrice = cartproducts.reduce((acc,item)=>{
 
 
 },0)
-totalcost.innerText = "$"+ totalPrice;
+totalcost.innerText = "$"+ parseFloat(totalPrice).toFixed(2);
 totalCartPrice.innerText = "$"+parseFloat(totalPrice+1.86).toFixed(2);
 
 
