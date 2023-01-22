@@ -109,18 +109,23 @@ let totalPrice = paymentproducts.reduce((acc,item)=>{
     
    
 },0)
+
 totalcost.innerText = "$"+ parseFloat(totalPrice).toFixed(2);
 totalCartPrice.innerText = "$"+parseFloat(totalPrice+1.86).toFixed(2);
 
+
+
 //  console.log(typeof(totalPrice));
 
-
+let orderinfo = JSON.parse(localStorage.getItem("OrderInfo"))||[];
 orderBtn.addEventListener("click",()=>{
     alert("Thank You! Your Order Is Placed");
-    localStorage.setItem("Order_number",Math.floor(Math.random() * (9999 - 1000 + 1)) + 1000);
-    localStorage.setItem("Payment_mode","Cash on Delivery");
-    localStorage.setItem("Payment_status","false");
-    localStorage.setItem("Amount",totalPrice);
+    // localStorage.setItem("Order_number",Math.floor(Math.random() * (9999 - 1000 + 1)) + 1000);
+    // localStorage.setItem("Payment_mode","Cash on Delivery");
+    // localStorage.setItem("Payment_status","false");
+    // localStorage.setItem("Amount",totalPrice);
+    orderinfo.push(OrderInfo(totalPrice))
+    localStorage.setItem("OrderInfo",JSON.stringify(orderinfo));
     localStorage.removeItem("small_kitchen_appliances");
     localStorage.removeItem("Cart_item");
 
@@ -131,3 +136,15 @@ let backToCartBtn = document.getElementById("back");
 backToCartBtn.addEventListener("click",()=>{
    window.location.href="cart.html";
 })
+
+
+function OrderInfo(num){
+    let obj={};
+    obj.Order_number = Math.floor(Math.random() * (9999 - 1000 + 1)) + 1000;
+    obj.Payment_mode = "Cash on Delivery";
+    obj.Payment_status="false";
+    obj.Amount = num;
+
+    return obj;
+
+}

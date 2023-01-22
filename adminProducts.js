@@ -5,6 +5,11 @@ let dashboard = document.getElementById("dashboard-page");
 let orders = document.getElementById("orders-page");
 let customers = document.getElementById("customers-page");
 let tableBody = document.getElementById("tableBody");
+let home = document.getElementById("home");
+
+home.addEventListener("click",() => {
+    window.location = "./index.html";
+})
 
 add.addEventListener("click",() => {
     window.location = "./adminAddProducts.html";
@@ -56,7 +61,7 @@ function renderProducts(data) {
          category.innerText = element.category;
 
          let price = document.createElement("td");
-         price.innerText = element.price;
+         price.innerText = `$ ${element.price}`;
 
          let availability = document.createElement("td");
          availability.style.color = "green";
