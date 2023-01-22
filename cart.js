@@ -1,22 +1,26 @@
 
-let cartproducts = JSON.parse(localStorage.getItem("cart"));
+let cartproducts = JSON.parse(localStorage.getItem("small_kitchen_appliances"));
 let emp = document.getElementById("empty");
-let dis = document.getElementById("card");
+let mainSection = document.getElementById("card");
 let con = document.getElementById("con");
 let count=1;
 let totalpro = document.getElementById("count");
 let totalcost = document.getElementById("cost");
-let placeorder = document.getElementById("order");
-
+let checkoutBtn = document.getElementById("go_to_checkout");
+console.log(checkoutBtn);
+checkoutBtn.addEventListener("click",()=>{
+    console.log("working")
+    window.location.href="checkout.html"
+})
 
 
 if(cartproducts==null){
     emp.style.display="block";
-    dis.style.display="none";
+    mainSection.style.display="none";
     con.style.display="none"
 }else{
     emp.style.display="none";
-    dis.style.display="grid";
+    mainSection.style.display="flex";
     con.style.display="flex";
 }
 
@@ -24,103 +28,38 @@ if(cartproducts==null){
 
 totalpro.innerText=cartproducts.length;
 
-cartproducts.forEach(function(e,i){
+cartproducts.forEach(function(item,index){
   let totalCount=cartproducts.length;
-  //console.log(totalCount)
-  let parent = document.getElementById("card");
-  let card = document.createElement("div");
-  card.setAttribute("class","pro")
+  console.log(totalCount)
+let card = document.createElement("div");
+card.classList.add = "itemCard";
+card.innerHTML=`
+<div style="border : 3px solid teal;">
+<img src="${item.image}" alt="">
+</div>
+<div  style="border : 3px solid red;">
+<h3 class="card-description">${item.description}</h3>
+<p class="card-price">$. ${item.price}</p>
+<select name="quantity" id="quantity-select">
+    <option value="">--Please choose quantity--</option>
+    <option value="1">1</option>
+    <option value="2">2</option>
+    <option value="3">3</option>
+    <option value="4">4</option>
+    <option value="5">5</option>
+    <option value="5+">5+</option>
+</select>
+<button id="delete-item">Delete</button>
 
-
-  let Img = document.createElement("img");
-  Img.setAttribute("src",e.img);
-  
-
-  let Name = document.createElement("p");
-  Name.innerHTML = e.name;
-
-  let Price = document.createElement("h3");
-  Price.innerText = "₹"+" "+e.price;
-  // console.log(e.price);
-
-  
-  
-
-  
-  let rem = document.createElement("button");
-  rem.textContent = "-";
-  rem.style.width="15%";
-  rem.style.marginLeft="2px"
-  rem.addEventListener("click",function(){
-    if(qty.innerText<=1){
-        cartproducts.splice(i,1);
-        if(cartproducts.length === 0){
-            cartproducts = null;
-        }
-        localStorage.setItem("cart",JSON.stringify(cartproducts));
-        
-        window.location.reload();
-
-    }else{
-        qty.innerText--;
-       
-       
-      
-    }
-  })
-
-  let qty = document.createElement("span");
-  qty.innerText=count;
-
-  
-
-  let add = document.createElement("button");
-  add.textContent = "+";
-  add.style.width="15%";
-  add.addEventListener("click",function(){
-    qty.innerText++;
-   
-   
-   
-  })
- 
-
-  
-
-  let del = document.createElement("button");
-  del.textContent = "Delete";
-  del.style.width="40%";
-  del.style.marginLeft="40px"
-  del.addEventListener("click",function(){
-    cartproducts.splice(i,1);
-    if(cartproducts.length === 0){
-        cartproducts = null;
-    }
-    localStorage.setItem("cart",JSON.stringify(cartproducts));
-    
-    window.location.reload();
-
-  })
-
-  let totalprice = cartproducts.reduce((acc,e)=>acc+(parseInt(e.price)),0);
-  console.log(+e.price)
-  let p = totalprice;
-
-  console.log(p);
-
-totalcost.innerText="₹"+" "+p;
- 
-
-  card.append(Img,Name,Price,rem,qty,add,del)
-  parent.append(card);
-  let sup=document.querySelector("#cartCount").innerText=totalCount;
-
-  
+</div>
+`
+  mainSection.append(card);
 
 });
 
 
-placeorder.addEventListener("click",function(){
-    localStorage.setItem("paymentproducts",JSON.stringify(cartproducts));
-    window.location.assign("./address.html");
-})
+// placeorderBtn.addEventListener("click",function(){
+//     console.log("working")
+//     localStorage.setItem("paymentproducts",JSON.stringify(cartproducts));
+//     window.location.href="checkout.html";
+// })
