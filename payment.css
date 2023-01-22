@@ -1,0 +1,180 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+body{
+    background-color:  #f3f3f3;
+}
+nav{
+    width: 100%;
+    height: 80px;
+    /* border: 1px solid black; */
+   display: flex;
+   border-bottom: 2px solid  #a8a8a9;
+   background-color: white;
+}
+nav h3{
+    font-size: xx-large;
+    font-weight: bolder;
+}
+#better-living {
+    width: 20%;
+    font-size: 20px;
+    margin: auto;
+    /* border: 5px solid black; */
+  }
+  #better-living div {
+    margin-left: 15px;
+    font-family: cursive;
+    font-weight: bold;
+  }
+  #back:hover{
+    cursor: pointer;
+    text-decoration: underline;
+
+  }
+  #image{
+    width: 100%;
+    height: auto;
+    /* border: 1px solid red; */
+    display: block;
+  }
+  #image img{
+    width: 30%;
+    margin-left: 200px;
+  }
+  #con{
+    width: 100%;
+    display: flex;
+    margin: auto;
+    justify-content: space-evenly;
+}
+.total{
+    width: 30%;
+    height: auto;
+    /* border: 1px solid red; */
+    color: #008ecc;
+    padding: 10px;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    /* margin-top: 100px; */
+    background-color: white;
+    border-radius: 10px;
+  }
+  .total h1{
+    color: black;
+  }
+  .total span{
+    color: black;
+  }
+  button:hover{
+    cursor: pointer;
+ }
+
+ .total>button{
+    width: 300px;
+    padding: 15px;
+    /* margin: 10px 2px 10px 100px; */
+    margin-top: 50px;
+    margin-left: 50px;
+    background-color: #008ecc;
+    color: white;
+    border: 0px;
+    border-radius: 5px;
+ }
+ #link{
+    color: #008ecc;
+    font-weight: bolder;
+ }
+ #link:hover{
+    text-decoration: underline;
+ }
+ p{
+    letter-spacing: 1.25px;
+ }
+ #payment{
+  width: 100%;
+  height: 700px;
+  border: 2px solid yellow;
+ }
+
+ #rb1 img{
+  width: 30px;
+  /* display: block; */
+  margin-top: 10px;
+  /* border: 5px solid red; */
+  
+ }
+ input[type = "radio"]{
+  width: 5%;
+  height: 5%;
+  margin-bottom: 40px;
+  margin-left: 30px;
+ }
+ /* #rb1{
+  border: 3px solid teal;
+ 
+ } */
+ #main{
+  width: 50%;
+}
+
+#main{
+  display: none;
+  
+  
+}
+#main>div:nth-child(2){
+  border: none;
+}
+#num{
+  width:60%;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  padding: 10px;
+  border-radius: 5px;
+}
+#ex{
+  margin-right: 10px;
+  padding: 10px;
+  border-radius: 5px;
+}
+#cvv{
+  width: 20%;
+  margin-top: 10px;
+  padding: 10px;
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
+#main img{
+  width: 12%;
+}
+#button{
+  border: none;
+}
+#card-pic{
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+#save-button button{
+  margin: 10px;
+  padding: 10px;
+  width: 70%;
+  font-size: 16px;
+  background-color: rgb(0,113,227);
+  color: white;
+  border-radius: 10px;
+  border: none;
+}
+#place{
+  margin: 10px;
+  margin-bottom: 60px;
+  padding: 10px;
+  width: 36%;
+  font-size: 16px;
+  background-color: rgb(0,113,227);
+  color: white;
+  border-radius: 10px;
+  border: none;
+
+}
