@@ -61,7 +61,8 @@ fetch("https://63c6d291dcdc478e15ca4df5.mockapi.io/appliances")
 function displayAsCards(data) {
     let container = document.getElementById("cards");
     container.innerHTML = "";
-    data.forEach((item,index) => {
+    data.forEach((item, index) => {
+        
         let card = document.createElement("div");
         card.classList.add("card");
         card.innerHTML = `
@@ -83,6 +84,7 @@ function displayAsCards(data) {
             <div class="early-price">
                 <p>Was Rs. ${Math.floor(Math.random() * (900 - 600) + 600)}</p>
             </div>
+            
             <div class="card-rating">    
                 <h3>Rating - ${item.rating}</h3>
             </div>
@@ -552,6 +554,7 @@ icemaker.addEventListener("click", () => {
     }
 }   
 );
+
 
 
 
