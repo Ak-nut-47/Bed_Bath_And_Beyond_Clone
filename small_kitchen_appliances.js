@@ -79,10 +79,10 @@ function displayAsCards(data) {
                 <p>${item.description}</p>
             </div>
             <div class="card-price">
-                <p>Rs. ${item.price}</p>
+                <p>$ ${item.price}</p>
             </div>
             <div class="early-price">
-                <p>Was Rs. ${Math.floor(Math.random() * (900 - 600) + 600)}</p>
+                <p>Was $ ${Math.floor(Math.random() * (900 - 600) + 600)}</p>
             </div>
             
             <div class="card-rating">    
