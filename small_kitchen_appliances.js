@@ -108,6 +108,7 @@ btn.forEach((item) => {
         arr.push(data[id]);
         localStorage.setItem("small_kitchen_appliances", JSON.stringify(arr));
         JSON.stringify(localStorage.getItem("small_kitchen_appliances"));
+        alert("Item added to cart");
     })
 })
 }
