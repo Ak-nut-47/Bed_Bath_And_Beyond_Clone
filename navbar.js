@@ -59,7 +59,7 @@ let navbar = () => {
       </div>
     </div>
     <div class="section-div">
-    <div onclick="window.location.href='furniture.html'"
+    <div onclick="window.location.href='bedding.html'"
     >Bedding</div>
       <div>Bath</div>
       <div>Kitchen</div>
