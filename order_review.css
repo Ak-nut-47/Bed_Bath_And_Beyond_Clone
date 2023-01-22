@@ -44,3 +44,161 @@ nav h3{
     width: 30%;
     margin-left: 200px;
   }
+  .carditem{
+    /* border: 1px solid black; */
+    border-radius: 10px;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+
+  }
+  .carditem>img{
+    width: 100%;
+    height: 200px;
+    margin-top: 10px;
+  }
+  #rate{
+    width: 100%;
+    height: 50px;
+  }
+  .carditem>button{
+    display: block;
+    margin: auto;
+    width: 90%;
+    border: 3px solid #dcdcde;
+    background-color: white;
+    color:#07425b;
+    margin-bottom: 10px;
+    font-size: medium;
+    font-weight: bold;
+
+  }
+  .carditem>button:hover{
+    cursor: pointer;
+    background-color: #07425b;
+    color: white;
+  }
+  .carditem>h3{
+    text-align: center;
+  }
+  .carditem>p:hover{
+    text-decoration: underline;
+   cursor: pointer;
+    color: #176383;
+  }
+  .card{
+    /* border: 1px solid green; */
+    width: 60%;
+    display: flex;
+    
+  }
+  .itemCard{
+    display: flex;
+    /* border: 10px solid black; */
+    border-radius: 10px;
+    background-color: white;
+    margin-bottom: 20px;
+  }
+ 
+  #delete-item{
+    /* display: block; */
+    width: 70%;
+    padding: 10px;
+    margin-left: 150px;
+    border-radius: 5px;
+    background-color: #008ecc;
+    color: white;
+    border: 0px;
+  }
+  .itemCard select{
+    margin: 30px;
+    height: 42px;
+    width: 100px;
+    border-radius: 5px;
+  }
+  .card-description{
+    font-family: 'Courier New', Courier, monospace;
+    font-size: large;
+    margin-left: 30px;
+
+  }
+  .card-price{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: medium;
+    margin-left: 30px;
+  }
+  .itemCard img{
+    width: 100%;
+    height: auto;
+    border-radius: 10px 0px 0px 10px;
+  }
+  .card-price:hover,.card-description:hover{
+    cursor: pointer;
+    text-decoration: underline;
+    color: #147eab;
+  }
+  .con{
+    display: flex;
+    justify-content: space-evenly;
+  }
+  .total{
+    width: 30%;
+    height: auto;
+    /* border: 1px solid red; */
+    color: #008ecc;
+    padding: 10px;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    /* margin-top: 100px; */
+    background-color: white;
+    border-radius: 10px;
+  }
+  .total h1{
+    color: black;
+  }
+  .total span{
+    color: black;
+  }
+  button:hover{
+    cursor: pointer;
+ }
+
+ .total>button{
+    width: 300px;
+    padding: 15px;
+    /* margin: 10px 2px 10px 100px; */
+    margin-top: 50px;
+    margin-left: 50px;
+    background-color: #008ecc;
+    color: white;
+    border: 0px;
+    border-radius: 5px;
+ }
+ #card{
+  display: block;
+ }
+ .card-description{
+  font-family: 'Courier New', Courier, monospace;
+  font-size: large;
+  margin-left: 30px;
+ margin-bottom: 30px;
+ margin-top: 20px;
+}
+.card-price{
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: medium;
+  margin-left: 30px;
+}
+.itemCard img{
+  width: 100%;
+  height: auto;
+  border-radius: 10px 0px 0px 10px;
+}
+.card-price:hover,.card-description:hover{
+  cursor: pointer;
+  text-decoration: underline;
+  color: #147eab;
+}
+.Quantity{
+  font-size: larger;
+  font-weight: bold;
+  margin-top: 30px;
+  margin-left: 30px;
+}

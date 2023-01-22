@@ -7,10 +7,30 @@
     <title>Your Shopping Cart | Better Living Home</title>
     <link rel="icon" type="image" href="./jiomartfavicon.png">
     <link rel="stylesheet" href="./cart.css">
+    <link rel="stylesheet" href="navbar.css">
 </head>
 
 <body>
-
+    <nav id="navbar-one">
+        <div id="navbar-one-first-div"><p>Better Living Home</p></div>
+        <div id="navbar-one-second-div">
+          <div class="navbar-one-second-div-div">
+            <img
+              src="https://img.icons8.com/ios/2x/bag-diagonal-view.png"
+              alt=""
+            />
+            <p><b>Same day delivery</b>|order by 2 pm</p>
+          </div>
+          <div class="navbar-one-second-div-div">
+            <img
+              src="https://img.icons8.com/ios-filled/2x/bag-diagonal-view.png"
+              alt=""
+            />
+            <p><b>Store Pickup</b>|Find a Store</p>
+          </div>
+        </div>
+      </nav>
+    <div id="navbar"></div>
     <div id="empty">
         <p style="font: 600 40px/1.25 Termina Headline,sans-serif;letter-spacing: -.5px;">Your Cart is Empty!</p>
         <a id="shop" href="index.html">Continue Shopping</a>
@@ -28,7 +48,7 @@
             <p style="color: black;margin-top: 5px;">Order Subtotal:-<span  style="margin-left:70px" id="cost"></span></p>
             <p style="color: black;margin-top: 5px;">Shipping Details:-<span style="margin-left:70px"> Free</span></p>
             <p style="color: black;margin-top: 5px; ">Estimated Tax:-<span  style="margin-left:80px">$1.86</span></p>
-            <p style="color: black;margin-top: 5px; padding-bottom: 10px;">Total:-<span id="total" style="margin-left:80px"></span></p>
+            <p style="color: black;margin-top: 5px; padding-bottom: 10px;">Total:-<span id="total" style="margin-left:130px"></span></p>
             
         </div> 
          <h2 style="padding-left: 10px;">welcome rewards</h2>
@@ -39,7 +59,7 @@
     </div>
 </div>
 <div>
-    <p style="font: 600 40px/1.25 Termina Headline,sans-serif;letter-spacing: -.5px;">Last Minute Item</p>
+    <p style="font: 600 40px/1.25 Termina Headline,sans-serif;letter-spacing: -.5px; text-align: center;">Last Minute Item</p>
     <div id="last_min">
         <div class="carditem">
             <img src="https://b3h2.scene7.com/is/image/BedBathandBeyond/31374572954_imageset?$140$&wid=140&hei=140" alt="">
@@ -187,4 +207,27 @@
     
 </body>
 <script src="./cart.js"></script>
+<script type="module">
+    import navbar from "./navbar.js";
+
+    let navbar_div = document.getElementById("navbar");
+    navbar_div.innerHTML = navbar();
+
+    let sectionDiv = document.querySelector(".section-div ");
+    sectionDiv.addEventListener("click", function () {
+      let dropDownContainer = document.querySelector(".dropdown-content-part");
+      dropDownContainer.style.display = "flex";
+    });
+
+    let body = document.querySelector("body");
+    body.addEventListener("click", () => {
+      let dropDownContainer = document.querySelector(".dropdown-content-part");
+      dropDownContainer.style.display = "none";
+    });
+
+    let navbarID = document.getElementById("navbar");
+    navbarID.addEventListener("click", (event) => {
+      event.stopPropagation();
+    });
+  </script>
 </html>

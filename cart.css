@@ -1,3 +1,46 @@
+
+#navbar-one {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  display: block;
+  transition: top 0.3s;
+  z-index: 1;
+  display: flex;
+  /* border: 2px solid red; */
+  height: 40px;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #3510bd;
+  color: white;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+#navbar-one-first-div {
+  padding-left: 20px;
+}
+#navbar-one-first-div p {
+  font-family: fantasy;
+}
+#navbar-one-second-div {
+  /* border: 2px solid blue; */
+  width: 50%;
+  align-items: center;
+  padding-right: 20px;
+}
+.navbar-one-second-div-div {
+  /* border: 2px solid rgb(255, 0, 76); */
+  float: right;
+  width: 45%;
+  align-items: center;
+  letter-spacing: 7;
+  font-size: 12px;
+}
+.navbar-one-second-div-div img {
+  height: 20px;
+  float: left;
+  margin-right: 8px;
+}
 body{
   background-color:#f3f3f3;
 }
@@ -6,6 +49,7 @@ body{
     height: 200px;
     /* border: 1px solid black; */
     margin: auto;
+    margin-top: 190px;
 }
 #empty img{
     width: 200px;
@@ -22,14 +66,14 @@ body{
     width: 90%;
     height: auto;
     display: flex;
-    border: 1px solid black;
+    /* border: 1px solid black; */
     margin: auto;
     justify-content: space-evenly;
     margin-top: 20px;
   }
   .total{
     width: 30%;
-    height: auto;
+    height: 500px;
     /* border: 1px solid red; */
     color: #008ecc;
     padding: 10px;
@@ -37,6 +81,7 @@ body{
     /* margin-top: 100px; */
     background-color: white;
     border-radius: 10px;
+    margin-top: 50px;
   }
   .total h1{
     color: black;
@@ -60,59 +105,70 @@ body{
     border-radius: 5px;
  }
     
- #footer{
-    text-align: center;
-background-color:#f7f7f7; 
-width: 100%;
-height: 1200px;
-margin-top: 20px;
-   } 
-   #first{
-
-    width:100%;
-    height: auto; 
-    display: flex; 
-    margin: auto; 
-   gap: auto; 
-   text-align: center; 
-   padding: auto; 
-   } 
-   #one{
-
-    width: 25%;
-    height: auto; 
-    margin-left: 50px; 
-    text-align: left;
-   } 
-   .grids{
-    grid-template-columns: repeat(5,minmax(0,1fr)); 
-    display: grid;
-}      
-a{
-color: black;
+/* Animesh wala code  */
+#footer {
+  text-align: center;
+  background-color: #f7f7f7;
+  width: 100%;
+  height: 1200px;
+  position: relative;
+  /* top: 510px; */
+  border-top: 2px solid wheat;
 }
-  #sub{
-    border-radius: 5px; 
-    border: 2px solid grey; 
-    width: 100%; 
-    height: 40px;
-  }  
-  button{
-    background-color:blue;
-    width: 100%; 
-    height: 50px;
-    color: white; 
-    border-radius: 5px; 
-    border: 1px solid white;
-  } 
-  img{
-    width: 50%; 
-    height: 50px;
-  } 
+#first {
+  width: 100%;
+  height: auto;
+  display: flex;
+  margin: auto;
+  gap: auto;
+  text-align: center;
+  padding: auto;
+}
+#one {
+  width: 25%;
+  height: auto;
+  margin-left: 50px;
+  text-align: left;
+}
+.grids {
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  display: grid;
+}
+#footer a {
+  color: black;
+}
+#sub {
+  border-radius: 5px;
+  border: 2px solid grey;
+  width: 100%;
+  height: 40px;
+}
+#footer button {
+  background-color: blue;
+  width: 100%;
+  height: 50px;
+  color: white;
+  border-radius: 5px;
+  border: 1px solid white;
+}
+#footer img {
+  width: 50%;
+  height: 50px;
+}
 
-  a{
-    text-decoration: none;
-  }
+#footer a {
+  text-decoration: none;
+  font-family: "Times New Roman", Times, serif;
+}
+#footer h3 {
+  margin: 18.7px 0px;
+  font-family: "Times New Roman", Times, serif;
+}
+#footer p {
+  margin: 16px 0px;
+  font-size: 16px;
+  font-family: "Times New Roman", Times, serif;
+}
   #shop{
     display: block;
     text-align: center;
@@ -178,12 +234,55 @@ color: black;
     color: #176383;
   }
   .card{
-    border: 1px solid green;
+    /* border: 1px solid green; */
     width: 60%;
     display: flex;
     
   }
   .itemCard{
     display: flex;
-    border: 10px solid black;
+    /* border: 10px solid black; */
+    border-radius: 10px;
+    background-color: white;
+    margin-bottom: 20px;
+  }
+  .con{
+    margin-top: 200px ;
+  }
+  #delete-item{
+    /* display: block; */
+    width: 70%;
+    padding: 10px;
+    margin-left: 150px;
+    border-radius: 5px;
+    background-color: #008ecc;
+    color: white;
+    border: 0px;
+  }
+  .itemCard select{
+    margin: 30px;
+    height: 42px;
+    width: 100px;
+    border-radius: 5px;
+  }
+  .card-description{
+    font-family: 'Courier New', Courier, monospace;
+    font-size: large;
+    margin-left: 30px;
+
+  }
+  .card-price{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: medium;
+    margin-left: 30px;
+  }
+  .itemCard img{
+    width: 100%;
+    height: auto;
+    border-radius: 10px 0px 0px 10px;
+  }
+  .card-price:hover,.card-description:hover{
+    cursor: pointer;
+    text-decoration: underline;
+    color: #147eab;
   }
