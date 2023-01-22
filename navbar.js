@@ -20,7 +20,11 @@ let navbar = () => {
       </div>
       </div>
       <div id="account1" class="class-account class-account-common">
-        <div onclick="window.location.href='SignIn.html'">
+
+        <div onclick="window.location.href='./SignIn.html'">
+
+       
+
           <img src="https://i.postimg.cc/RCb3PDNz/User.png" alt="" />
         </div>
         <div onclick="window.location.href='SignIn.html'" >Account</div>
@@ -28,7 +32,11 @@ let navbar = () => {
           <img src="https://i.postimg.cc/DZHpvK2K/Chevron-Up.png" alt="" />
         </div>
         <div class="account-dropdown-content">
-          <div onclick="window.location.href='SignIn.html'">My Account</div>
+
+          <div onclick="window.location.href='./SignIn.html'" win>My Account</div>
+
+         
+
           <div>My Orders</div>
           <div>My Reviews</div>
           <div>Gift Cards</div>
@@ -59,7 +67,11 @@ let navbar = () => {
       </div>
     </div>
     <div class="section-div">
+
+ 
+
     <div onclick="window.location.href='bedding.html'"
+
     >Bedding</div>
       <div>Bath</div>
       <div>Kitchen</div>
@@ -101,7 +113,7 @@ let navbar = () => {
       <div>
         <div>
           <div class="dark-div">Bedroom Furniture</div>
-          <div>Beds</div>
+          <div><a href="./bedding.html" style = "text-decoration : none; color : grey;"> Beds </a></div>
           <div>Bedroom Sets</div>
           <div>Headboards</div>
           <div>Bed Frames</div>
@@ -123,7 +135,7 @@ let navbar = () => {
       <div>
         <div>
           <div class="dark-div">Dining, Kitchen & Bar</div>
-          <div>Kitchen & Dining Sets</div>
+          <div><a href="./small_kitchen_appliances.html" style = "text-decoration : none ; color : grey;"> Small Kitchen Appliances </a></div>
           <div>Kitchen & Dining Chairs</div>
           <div>Kitchen & Dining Tables</div>
           <div>Counter & Bar Stools</div>
