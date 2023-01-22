@@ -12,7 +12,7 @@
     <style>
         #container{
             width:90%;
-            height:800px;
+            height:1000px;
             background-color: #f7f7f7; 
             margin: auto;
         }
@@ -92,6 +92,7 @@ h2 span {
 
    <div style="padding-left: 30px;"> <h2 style="color: #1a4e8a;">sign in or create</h2><br>
   <input type="email" placeholder="*email" style="width: 90%;height: 50px;border-radius: 5px;border: 1px solid grey;" id="email"/><br><br>
+  <input type="password" placeholder="*password" style="width: 90%;height: 50px;border-radius: 5px;border: 1px solid grey;" id="pass"/><br><br>
   <button id="submit">Continue</button><br><br>
   <h2 id="hoz"><span >OR</span></h2><br>
 
@@ -125,48 +126,44 @@ h2 span {
    
   </button> <br>
   <p>By continuing you agree to enroll in and to the<span><u>Terms</u></span>of our Welcome Rewards Program. For information on our privacy practices, please visit our <u>Privacy Policy</u>California residents: view our Notice of Financial Incentive </p>
+
+<p style="text-align: center;">© 2022 Bed Bath & Beyond Inc. and its subsidiaries.</p></div> 
 </div>
-</div> 
-<p style="text-align: center;">© 2022 Bed Bath & Beyond Inc. and its subsidiaries.</p></div>
     </div>  
     <script> 
     
       //var email = document.getElementById("email").value;
       var submit = document.getElementById("submit") 
       submit.addEventListener("click",(e)=>{   
-        var arr =JSON.parse(localStorage.getItem("email"))||[] 
-        var email = document.getElementById("email").value;
-        console.log(email)
+        var arr =JSON.parse(localStorage.getItem("user"))||[] 
+        var email = document.getElementById("email").value; 
+        var pass = document.getElementById("pass").value;
+        console.log(email,pass)
         e.preventDefault() 
         
         let obj ={
           email
-        }    
-        let count=0
+        }   
+        let count=0 
+        let name
         arr.forEach(element => {
-          if(element.email == email){ 
-            
-            count++;
-       
-            
+          if(element.email == email && element.pass == pass){
+            count++; 
+            name = element.fname;
           } 
-          else{ 
-            
-          count=0;
+          else{  
+           count=0;
           }
         }); 
-        console.log(count) 
-        if(count>0){
-          alert("Already user register") 
-            window.location.href="signin1.html"
-        } 
-        else{
-          window.location.href="signup.html"
-        }
-       arr.push(obj) 
-       //console.log(arr)
-        localStorage.setItem("email",JSON.stringify(arr))  
-      
+        console.log(count)
+         if(count>0){
+            alert("welcome",name) 
+            window.location.href="index.html"
+         }
+         else{ 
+            alert("user not found")
+            window.location.href="signup.html"
+         }
       })
     </script>
 </body>

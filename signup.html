@@ -40,7 +40,8 @@
         
      }  
      .inputField {
-  position: relative;
+  position: relative; 
+  width: 100%;
 }
 
 .inputField input {
@@ -48,7 +49,7 @@
   padding-top: 18px;
   border: 1.8px solid rgba(107, 107, 107, 0.4);
   border-radius: 3px;
-  width: 50%;
+  width: 90%;
   color: black;
 }
 
@@ -99,7 +100,7 @@
      #navt{
         padding:30px 30px 30px 30px;
      } 
-     button{
+     #sub{
         background-color: #1377c9; 
         border: #1377c9; 
         width: 92%; 
@@ -132,7 +133,7 @@ h2 span {
 
     </style>
 </head>
-<body> 
+<body > 
     <div id="nav"><div id="navt"><a href="index.html">< Back</a></div></div>
     <div id="container">
 
@@ -141,7 +142,7 @@ h2 span {
    <div style="padding-left: 30px;"> <h2 style="color: #1a4e8a;"> create Account</h2><br>
    <form id="submit">
     <div class="inputField">
-        <input type="email" placeholder=" " id="email" required />
+        <input type="email" placeholder=" " id="email"  required/>
         <span>* Email</span>
       </div> <br>  
       <div class="inputField">
@@ -153,22 +154,79 @@ h2 span {
         <span>* Last Name</span>
       </div> <br> 
       <div class="inputField">
-        <input type="mobile" placeholder=" " id="fname" required/>
+        <input type="tel" placeholder=" " id="mob" required/>
         <span>* Phone Number for Store Lookup</span>
-      </div>  <br> 
-      <p>Let us know your birthday so we can send a reward to celebrate your day! </p>     
+      </div>  <br>  
       <div class="inputField">
-        <input type="password" placeholder=" " id="fname" required/>
+       <input type="date" id="birthday" name="birthday" required>
+       <span>* birthday</span>
+        </div>
+      <p>Let us know your birthday so we can send a reward to celebrate your day! </p> <br>    
+      <div class="inputField">
+        <input type="password" placeholder=" " id="pass" required/>
         <span>* Password</span>
-      </div>                                                                                                                           
-    </form>
-  <button>Create an Account</button><br><br>
+      </div> <br>      
+      <div class="inputField">                                                                                                                   
+      <input type="submit" id="sub"value="Create an Account"/>
+      </div><br><br> 
+       </form>
+  <input type="checkbox" checked>
+  <label>Yes, add me to the Bed Bath & Beyond email list.</label> <br>
+  <input type="checkbox" checked>
+   <label>Yes, add me to the buybuyBABY email list.</label><br> 
+   <input type="checkbox" checked>
+   <label>Yes, add me to the Harmon email list.</label><br> 
+   <input type="checkbox" checked>
+   <label>Keep me signed in</label><br> 
+   <input type="checkbox" checked>
+    <label> if using a public device</label><br>
   <h2 id="hoz"></h2><br>
-
   <p>By continuing you agree to enroll in and to the<span><u>Terms</u></span>of our Welcome Rewards Program. For information on our privacy practices, please visit our <u>Privacy Policy</u>California residents: view our Notice of Financial Incentive </p>
+  <p style="text-align: center;">© 2022 Bed Bath & Beyond Inc. and its subsidiaries.</p>
 </div>
 </div> 
-<p style="text-align: center;">© 2022 Bed Bath & Beyond Inc. and its subsidiaries.</p></div>
+
     </div>
-</body>
+    <script> 
+      
+      var submit = document.getElementById("sub"); 
+      var form = document.getElementById("submit");
+      
+      
+      form.addEventListener("submit",(e)=>{   
+        e.preventDefault() 
+        var e = JSON.parse(localStorage.getItem("email"))||[]
+        var arr= JSON.parse(localStorage.getItem("user"))||[]  
+        var email =document.getElementById("email").value;
+      var fname = document.getElementById("fname").value; 
+      var lname = document.getElementById("lname").value;
+      var mobile = document.getElementById("mob").value; 
+      var dob = document.getElementById("birthday").value;
+      var pass = document.getElementById("pass").value; 
+       var e = JSON.parse(localStorage.getItem("email"))||[]  
+       if(mobile.length>10 || mobile.length<10){
+        alert("mobile no should be of 10 Digits")
+       } 
+       else{
+        let obj = {
+          email:email, 
+          fname:fname,
+          lname:lname,
+          mobile:mobile,
+          dob:dob,
+          pass:pass,
+        }  
+          arr.push(obj) 
+        console.log(arr)  
+        localStorage.setItem("user",JSON.stringify(arr))
+          
+        window.location.href="./signin1.html"
+        }
+        
+
+      }) 
+      
+      </script>
+</body> 
+
 </html>
