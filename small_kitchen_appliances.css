@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Play:wght@400;700&family=Poppins:wght@200;300;400;500;900&family=Rubik:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Play:wght@400;700&family=Poppins:wght@200;300;400;500;900&family=Rubik:wght@300&family=Wire+One&display=swap');
 *{
     /* font-family: 'Poppins', sans-serif; */
     margin: 0px;
@@ -223,6 +223,7 @@ body>div:nth-child(3){
     display: grid;
     grid-template-columns: repeat(3,1fr);
     gap: 20px;
+    grid-template-rows: fit-content(40%);
 }
 .card{
     display: flex;
@@ -231,6 +232,7 @@ body>div:nth-child(3){
     background-color: white;
     border-radius: 15px;
     box-shadow: rgba(186, 184, 184, 0.35) 0px 5px 15px;
+   
 }
 .card>div div{
 margin-bottom: 8px;
@@ -255,6 +257,10 @@ margin-bottom: 8px;
     padding: 14px 24px;
     border: 2px solid #1377c9;
     border-radius: 5px;
+    font-family: Poppins;
+    font-size: 16px;
+    font-weight: 400;
+    color:  #0e558f;
 }
 .btn:hover{
     cursor: pointer;
@@ -272,6 +278,25 @@ margin-bottom: 8px;
 #max{
     width: 80%;
     padding-left: 10px;
+}
+.card-description {
+    font-family:  sans-serif;
+    font-size: 15px;
+    font-weight: 300;
+    color: #7a7a7a;
+ 
+}
+.card-description:hover{
+    color: #4e99d6;
+    cursor: pointer;
+    text-decoration: underline;
+}
+.card-price>p{
+    color: #e00000;
+    font-size: larger;
+}
+.early-price{
+    color: #6e6e6e;
 }
 
 
