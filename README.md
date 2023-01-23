@@ -22,4 +22,8 @@ Sign up for our newsletter to stay updated on new products, special promotions, 
 We are here to help you make your home a better place to live in.
 
 
+Deployed link : https://better-living-home.netlify.app/index.html
+
+API link : https://63c6d291dcdc478e15ca4df5.mockapi.io/appliances
+
 
