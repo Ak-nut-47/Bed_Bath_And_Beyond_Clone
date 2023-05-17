@@ -23,8 +23,8 @@ We are here to help you make your home a better place to live in.
 
 ### If First deployed link is not working, try the second one 
 
-Deployed link : https://better-living-home.netlify.app/index.html
-              :https://hilarious-quokka-b627d9.netlify.app/
+Deployed link 1 : https://better-living-home.netlify.app/index.html
+Deployed link 2 :https://hilarious-quokka-b627d9.netlify.app/
 
 API link : https://63c6d291dcdc478e15ca4df5.mockapi.io/appliances
 
